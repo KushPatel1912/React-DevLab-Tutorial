@@ -1,0 +1,422 @@
+/** @format */
+
+/* React Hooks Page Specific Styles */
+.react-hooks-page {
+  min-height: 100vh;
+  background: var(--apple-gray-1);
+}
+
+/* Hook Demo Components */
+.hook-demo {
+  background: var(--apple-gray-2);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  border: 1px solid var(--apple-gray-3);
+}
+
+/* Demo Counter */
+.demo-counter {
+  text-align: center;
+}
+
+.demo-counter h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--apple-gray-8);
+  font-size: 1.2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.button-group button:hover {
+  background: var(--apple-blue-dark);
+  transform: translateY(-1px);
+}
+
+/* Demo Form */
+.demo-form {
+  text-align: center;
+}
+
+.demo-input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--apple-gray-3);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.demo-input:focus {
+  outline: none;
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.demo-form p {
+  margin: var(--spacing-sm) 0;
+  color: var(--apple-gray-7);
+  font-size: 0.9rem;
+}
+
+/* Demo Window Size */
+.demo-window-size,
+.demo-window-size-hook {
+  text-align: center;
+}
+
+.demo-window-size p,
+.demo-window-size-hook p {
+  margin: var(--spacing-xs) 0;
+  color: var(--apple-gray-7);
+  font-size: 0.9rem;
+}
+
+/* Demo API */
+.demo-api {
+  text-align: center;
+}
+
+.demo-api p {
+  margin: var(--spacing-sm) 0;
+  color: var(--apple-gray-7);
+  font-size: 0.9rem;
+}
+
+/* Demo Todo */
+.demo-todo {
+  text-align: center;
+}
+
+.todo-input {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.todo-input input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.todo-input button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.todo-input button:hover {
+  background: var(--apple-blue-dark);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  margin: var(--spacing-xs) 0;
+  background: var(--apple-white);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--apple-gray-2);
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: var(--apple-gray-5);
+}
+
+.todo-list li span {
+  cursor: pointer;
+  flex: 1;
+  margin-right: var(--spacing-sm);
+}
+
+.todo-list li button {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.todo-list li button:hover {
+  background: #d70015;
+}
+
+/* Demo Callback */
+.demo-callback {
+  text-align: center;
+}
+
+.demo-callback p {
+  margin-bottom: var(--spacing-md);
+  color: var(--apple-gray-7);
+}
+
+.demo-callback button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.demo-callback button:hover {
+  background: var(--apple-blue-dark);
+}
+
+/* Demo Dependency */
+.demo-dependency {
+  text-align: center;
+}
+
+.demo-dependency button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: var(--spacing-sm) 0;
+  transition: all var(--transition-fast);
+}
+
+.demo-dependency button:hover {
+  background: var(--apple-blue-dark);
+}
+
+/* Demo Memo */
+.demo-memo {
+  text-align: center;
+}
+
+.demo-memo input {
+  margin-bottom: var(--spacing-md);
+}
+
+.demo-memo p {
+  color: var(--apple-gray-7);
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+/* Demo Object Memo */
+.demo-object-memo {
+  text-align: center;
+}
+
+.demo-object-memo button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: var(--spacing-sm) 0;
+  transition: all var(--transition-fast);
+}
+
+.demo-object-memo button:hover {
+  background: var(--apple-blue-dark);
+}
+
+.demo-object-memo p:last-child {
+  background: var(--apple-gray-2);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.8rem;
+  text-align: left;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+/* Demo Ref */
+.demo-ref {
+  text-align: center;
+}
+
+.demo-ref button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: var(--spacing-sm);
+  transition: all var(--transition-fast);
+}
+
+.demo-ref button:hover {
+  background: var(--apple-blue-dark);
+}
+
+/* Demo Previous Value */
+.demo-prev-value {
+  text-align: center;
+}
+
+.demo-prev-value p {
+  margin: var(--spacing-xs) 0;
+  color: var(--apple-gray-7);
+  font-size: 0.9rem;
+}
+
+/* Demo Theme */
+.demo-theme {
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.demo-theme.light {
+  background: var(--apple-white);
+  color: var(--apple-gray-8);
+}
+
+.demo-theme.dark {
+  background: var(--apple-gray-8);
+  color: var(--apple-white);
+}
+
+.demo-theme h4 {
+  margin-bottom: var(--spacing-md);
+}
+
+.demo-theme button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-fast);
+}
+
+.demo-theme button:hover {
+  background: var(--apple-blue-dark);
+}
+
+.themed-box {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-md);
+  transition: all var(--transition-normal);
+}
+
+.themed-box.light {
+  background: var(--apple-gray-2);
+  color: var(--apple-gray-8);
+}
+
+.themed-box.dark {
+  background: var(--apple-gray-7);
+  color: var(--apple-white);
+}
+
+.themed-box p {
+  margin: var(--spacing-xs) 0;
+  font-size: 0.9rem;
+}
+
+/* Demo Local Storage */
+.demo-local-storage {
+  text-align: center;
+}
+
+.demo-local-storage button {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: var(--spacing-sm);
+  transition: all var(--transition-fast);
+}
+
+.demo-local-storage button:hover {
+  background: var(--apple-blue-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-input input {
+    min-width: 100%;
+  }
+
+  .todo-list li {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .todo-list li span {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .demo-input {
+    font-size: 0.9rem;
+  }
+}

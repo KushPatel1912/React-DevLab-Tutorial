@@ -1,0 +1,243 @@
+/** @format */
+
+.gradients-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.gradients-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.gradient-section {
+  margin-bottom: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-section h2 {
+  color: #333;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.gradient-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gradient-item {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+}
+
+.gradient-item h3 {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.gradient-box {
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gradient-box:hover {
+  transform: scale(1.02);
+}
+
+.gradient-item code {
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  display: block;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* Linear Gradients */
+.linear-top-bottom {
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.linear-left-right {
+  background: linear-gradient(to right, #f093fb, #f5576c);
+}
+
+.linear-diagonal {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.linear-multiple {
+  background: linear-gradient(90deg, #ff9a9e, #fecfef, #fecfef);
+}
+
+/* Radial Gradients */
+.radial-circle {
+  background: radial-gradient(circle, #667eea, #764ba2);
+}
+
+.radial-ellipse {
+  background: radial-gradient(ellipse, #f093fb, #f5576c);
+}
+
+.radial-position {
+  background: radial-gradient(circle at top left, #4facfe, #00f2fe);
+}
+
+.radial-stops {
+  background: radial-gradient(circle, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+}
+
+/* Conic Gradients */
+.conic-basic {
+  background: conic-gradient(#667eea, #764ba2, #f093fb, #667eea);
+}
+
+.conic-angle {
+  background: conic-gradient(from 45deg, #4facfe, #00f2fe, #f093fb, #4facfe);
+}
+
+.conic-position {
+  background: conic-gradient(from 0deg at 30% 30%, #ff9a9e, #fecfef, #ff9a9e);
+}
+
+.conic-repeating {
+  background: repeating-conic-gradient(#667eea 0deg 90deg, #764ba2 90deg 180deg);
+}
+
+/* Repeating Gradients */
+.repeating-linear {
+  background: repeating-linear-gradient(45deg, #667eea, #667eea 10px, #764ba2 10px, #764ba2 20px);
+}
+
+.repeating-radial {
+  background: repeating-radial-gradient(circle, #f093fb, #f093fb 20px, #f5576c 20px, #f5576c 40px);
+}
+
+/* Complex Gradients */
+.multiple-gradients {
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%),
+    linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.gradient-image {
+  background: 
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    repeating-linear-gradient(45deg, #f093fb, #f093fb 5px, #f5576c 5px, #f5576c 10px);
+}
+
+/* Interactive Gradients */
+.interactive-gradient {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-gradient:hover {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  transform: scale(1.05);
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.animated-gradient-text {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  margin: 20px 0;
+  text-align: center;
+  animation: gradientShift 3s ease infinite;
+}
+
+.gradient-item p {
+  color: #666;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gradients-container h1 {
+    font-size: 2rem;
+  }
+  
+  .gradient-examples {
+    grid-template-columns: 1fr;
+  }
+  
+  .gradient-box {
+    height: 120px;
+  }
+  
+  .gradient-text,
+  .animated-gradient-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-section {
+    padding: 20px;
+  }
+  
+  .gradient-item {
+    padding: 15px;
+  }
+  
+  .gradient-item code {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+}

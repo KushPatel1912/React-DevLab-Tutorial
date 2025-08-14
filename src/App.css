@@ -1,38 +1,187 @@
+/** @format */
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.App.transitioning {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.page-container.transitioning {
+  opacity: 0.8;
+  transform: translateX(20px);
+}
+
+/* Navigation Header */
+.navigation-header {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.navigation-header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Back Button */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.back-button.active {
+  border-color: #007aff;
+  color: #007aff;
+}
+
+.back-button.active:hover {
+  background: #007aff;
+  color: white;
+  transform: translateX(-2px);
+}
+
+.back-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+  color: #ccc;
+}
+
+.back-button.disabled:hover {
+  transform: none;
+  background: white;
+  color: #ccc;
+}
+
+.back-icon {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.back-text {
+  font-weight: 500;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation Actions */
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.home-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  outline: none;
+}
+
+.home-button:hover {
+  border-color: #007aff;
+  background: #007aff;
   color: white;
+  transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .page-title {
+    font-size: 1.5rem;
+    order: -1;
+  }
+
+  .back-button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .back-text {
+    display: none;
+  }
+
+  .home-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-content {
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+
+  .back-button {
+    padding: 6px 10px;
+  }
+
+  .home-button {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
   }
 }
